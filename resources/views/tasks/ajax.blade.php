@@ -94,7 +94,7 @@
                         taskRow.find('td:nth-child(3)').text(response.description);
                         taskRow.find('td:nth-child(4)').html('<span class="badge badge-' + (response.is_completed ? 'success' : 'warning') + '">' + (response.is_completed ? 'Completed' : 'Pending') + '</span>');
                     } else {
-                        $('#tasksTable tbody').append('<tr id="task_id_' + response.id + '"><td>' + response.id + '</td><td>' + response.title + '</td><td>' + response.description + '</td><td><span class="badge badge-warning">Pending</span></td><td><a href="javascript:void(0)" data-id="' + response.id + '" class="btn btn-warning btn-sm editBtn">Edit</a><a href="javascript:void(0)" data-id="' + response.id + '" class="btn btn-danger btn-sm deleteBtn">Delete</a><a href="javascript:void(0)" data-id="' + response.id + '" class="btn btn-success btn-sm completeBtn">Complete</a></td></tr>');
+                        $('#tasksTable tbody').append('<tr id="task_id_' + response.id + '"><td>' + response.id + '</td><td>' + response.title + '</td><td>' + response.description + '</td><td><span class="badge badge-warning">Pending</span></td><td><a href="javascript:void(0)" data-id="' + response.id + '" class="btn btn-success btn-sm completeBtn">Complete</a> <a href="javascript:void(0)" data-id="' + response.id + '" class="btn btn-danger btn-sm deleteBtn">Delete</a></td></tr>');
                     }
                 },
                 error: function (xhr) {
